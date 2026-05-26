@@ -232,6 +232,27 @@ Follow these steps to build your app for Oculus Quest:
     `../Builds/OculusMobile_Release_OpenBrush/`.
 1.  Run `adb install com.Icosa.OpenBrush.apk`.
 
+## Enabling native Pico support
+
+Open Brush targets OpenXR instead of Pico by default. Follow these steps to enable native Pico support:
+.
+1.  In the **Standalone** and **Android** tabs of the Player settings, go to **Other Settings** > **Scripting Define Symbols**.
+1. Click the + button to create a new entry.
+1. Add `PICO_SUPPORTED` and press **Apply**.
+
+### Building your app for Pico Neo 3 Pro upwards
+
+Follow these steps to build your app for Pico:
+
+1.  Make sure the following are set in Unity:
+    *   **Open Brush** > **Build** > **Plugin: Pico**
+    *   **Open Brush** > **Build** > **Platform: Android**
+    *   **Open Brush** > **Build** > **Runtime: IL2CPP**
+1.  Navigate to **Open Brush** > **Build** > **Do Build**.
+1.  Find the generated executable. It will most likely be somewhere under
+    `../Builds/PicoMobile_Release_OpenBrush_Il2cpp/`.
+1.  Run `adb install foundation.icosa.openbrush.apk`.
+
 ### Enabling Multiplayer Photon Fusion and Photon Voice
 
 1.  Download and install both [Photon Fusion 2.0.3 SDK](https://doc.photonengine.com/fusion/current/getting-started/sdk-download) and [Photon Voice 2](https://assetstore.unity.com/packages/tools/audio/photon-voice-2-130518?srsltid=AfmBOoqJifR_h-nIp73IL5F83GSvOmk3WqKytS1YsxrEUuZqVfAv5kQ9) If those versions aren't available get the closest version you can but be aware we have only tested on the exact versions we've listed here.
