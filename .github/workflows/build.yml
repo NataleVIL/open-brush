@@ -27,6 +27,7 @@ jobs:
         github.ref == 'refs/heads/main' ||
         contains(github.ref, 'refs/tags/v') ||
         contains(github.event.head_commit.message, '[CI BUILD]')
+        
         )
       )
     name: Configure Build Parameters
